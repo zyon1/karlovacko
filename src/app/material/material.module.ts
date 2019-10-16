@@ -1,0 +1,71 @@
+import { NgModule } from "@angular/core";
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatCardModule,
+  MatTooltipModule,
+  MatProgressSpinnerModule,
+  MatTabsModule,
+  MatListModule,
+  MatIconModule,
+  MatInputModule,
+  MatMenuModule,
+  MatRippleModule,
+  MatTableModule,
+  MatToolbarModule,
+  MatSelectModule,
+  MatOptionModule,
+  MatDialogModule,
+  MatAutocompleteModule,
+  MatExpansionModule
+} from "@angular/material";
+
+@NgModule({
+  imports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatMenuModule,
+    MatRippleModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
+    MatExpansionModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatMenuModule,
+    MatRippleModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
+    MatExpansionModule
+  ]
+})
+export class MaterialModule {}
