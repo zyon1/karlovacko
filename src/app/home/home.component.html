@@ -7,8 +7,14 @@
       </div>
 
       <div class="btn">
-        <button mat-raised-button color="primary">Prijavite se</button>
-        <button mat-raised-button>Registrirajte se</button>
+        <a
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/auth']"
+          routerLinkActive="router-link-active"
+          >Prijavite se</a
+        >
+        <a mat-raised-button [routerLink]="['/auth']">Registrirajte se</a>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
