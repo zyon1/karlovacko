@@ -1,1 +1,43 @@
-<p>sign-in works!</p>
+<div class="login-register">
+  <div class="login-register-box">
+    <mat-card>
+      <mat-card-content>
+        <div class="login-register-box-header">
+          <h4>Login to Warehouse</h4>
+        </div>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+          <mat-form-field class="login-full-width">
+            <input matInput placeholder="Email" formControlName="username" />
+          </mat-form-field>
+          <mat-form-field class="login-full-width">
+            <input
+              matInput
+              placeholder="Password"
+              type="password"
+              formControlName="password"
+            />
+          </mat-form-field>
+          <!-- <a class="login-forgot" href="javascript;:" (click)="forgot()">Forgot pwd?</a> -->
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!loginForm.valid"
+            class="login-full-width large-btn"
+          >
+            Login
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            type="button"
+            (click)="loginWithGoogle()"
+            class="login-full-width large-btn"
+          >
+            Login with Google
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
