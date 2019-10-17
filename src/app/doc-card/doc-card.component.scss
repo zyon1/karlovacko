@@ -2,20 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 50px;
 }
 .data-box {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  border: solid 1px red;
+  box-shadow: 3px 3px 5px 6px #ccc;
   justify-content: space-between;
   padding: 15px;
 }
 
 .img {
   width: 150px;
-  border: solid 1px red;
   height: 150px;
+
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .padding-fix {
@@ -23,7 +25,6 @@
 }
 
 .company-data {
-  border: solid 1px red;
   width: 70%;
 }
 .company {
