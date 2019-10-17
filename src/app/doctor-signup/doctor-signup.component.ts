@@ -10,6 +10,10 @@ import { Router } from "@angular/router";
 })
 export class DoctorSignupComponent implements OnInit {
   doctorSignupForm: FormGroup;
+  locationSelected = false;
+  lat: number = 44.112877;
+  lng: number = 15.227476;
+  zoom = 15;
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
@@ -23,15 +27,11 @@ export class DoctorSignupComponent implements OnInit {
     this.doctorSignupForm = this.fb.group({
       firstName: ["", Validators.required],
       lastName: ["", Validators.required],
-      age: [""],
+      age: "",
       specialization: ["", Validators.required],
       companyName: ["", Validators.required],
       companyAddress: ["", Validators.required],
-      oib: ["", Validators.required],
-      email: ["", Validators.required],
-      password: ["", Validators.required],
-      address: ["", Validators.required],
-      description: ["", Validators.required],
+      // oib: ["", Validators.required],
       working_hours: this.fb.group({
         from: ["", Validators.required],
         to: ["", Validators.required]
@@ -42,7 +42,7 @@ export class DoctorSignupComponent implements OnInit {
     this.doctorSignupForm.setValue({
       firstName: "",
       lastName: "",
-      age: [""],
+      age: "",
       specialization: "",
       companyName: "",
       companyAddress: "",
@@ -58,10 +58,28 @@ export class DoctorSignupComponent implements OnInit {
     });
   }
   onSubmit() {
-    if (this.doctorSignupForm.valid) {
-      this.userService.createDoctor(this.doctorSignupForm.value).then(() => {
-        this.router.navigate(["/dashboard"]);
-      });
+    console.log(
+      "submitted",
+      this.doctorSignupForm.valid,
+      this.doctorSignupForm.errors
+    );
+    if (this.doctorSignupForm.valid && this.locationSelected) {
+      console.log("form valid");
+      this.userService
+        .createDoctor(
+          Object.assign(this.doctorSignupForm.value, {
+            location: { lat: this.lat, lng: this.lng }
+          })
+        )
+        .then(() => {
+          this.router.navigate(["/dashboard"]);
+        });
     }
+  }
+  selectLocation($event) {
+    this.lat = $event.coords.lat;
+    this.lng = $event.coords.lng;
+    this.locationSelected = true;
+    console.log("locationSelected");
   }
 }

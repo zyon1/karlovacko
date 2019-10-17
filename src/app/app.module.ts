@@ -16,10 +16,11 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AuthGuard } from "./auth.guard";
 import { SignUpUserComponent } from "./sign-up-user/sign-up-user.component";
 import { UserGuard } from "./user.guard";
-import { SiderComponent } from './sider/sider.component';
-import { DashMainComponent } from './dash-main/dash-main.component';
-import { DoctorSignupComponent } from './doctor-signup/doctor-signup.component';
-import { SignupComponent } from './signup/signup.component';
+import { SiderComponent } from "./sider/sider.component";
+import { DashMainComponent } from "./dash-main/dash-main.component";
+import { DoctorSignupComponent } from "./doctor-signup/doctor-signup.component";
+import { SignupComponent } from "./signup/signup.component";
+import { AgmCoreModule } from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,10 @@ import { SignupComponent } from './signup/signup.component';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.mapsApiKey
+    })
   ],
   providers: [AuthService, AuthGuard, UserGuard],
   bootstrap: [AppComponent]

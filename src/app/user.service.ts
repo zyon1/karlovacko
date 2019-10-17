@@ -35,7 +35,9 @@ export class UserService {
     if (this.isUserAvailable) {
       return this.db
         .doc<Doctor>(`${this.doctorPath}/${this.authService.user.uid}`)
-        .set(doctor);
+        .set(doctor)
+        .then(console.log)
+        .catch(console.error);
     }
     console.error("No user available");
 
