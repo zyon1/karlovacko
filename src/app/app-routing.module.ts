@@ -8,6 +8,9 @@ import { DashMainComponent } from "./dash-main/dash-main.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HomeComponent } from "./home/home.component";
 import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
+import { CalendarUserComponent } from "./calendar-user/calendar-user.component";
+import { FavoritUserComponent } from "./favorit-user/favorit-user.component";
+import { HistoryUserComponent } from "./history-user/history-user.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -23,7 +26,10 @@ const routes: Routes = [
     canActivate: [AuthGuard, UserGuard],
     children: [
       { path: "", component: DashMainComponent },
-      { path: "search", component: DoctorSearchComponent }
+      { path: "search", component: DoctorSearchComponent },
+      { path: "calendar", component: CalendarUserComponent },
+      { path: "favorit", component: FavoritUserComponent },
+      { path: "history", component: HistoryUserComponent }
     ]
   }
   /*{
