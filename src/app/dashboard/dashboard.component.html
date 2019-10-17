@@ -1,9 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Custom Toolbar</span>
     <div>
-      Hello, {{ (user$ | async)?.firstName }} {{ (user$ | async)?.lastName }}!
+      <span>Custom Toolbar</span>
+
+      <span class="hello"
+        >Hello, {{ (user$ | async)?.firstName }}
+        {{ (user$ | async)?.lastName }}!</span
+      >
     </div>
+
     <button mat-raised-button type="button" (click)="logout()">Logout</button>
   </mat-toolbar-row>
 </mat-toolbar>

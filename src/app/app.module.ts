@@ -26,6 +26,10 @@ import { AgmCoreModule } from "@agm/core";
 import { HomeComponent } from "./home/home.component";
 import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
 import { DocCardComponent } from "./doc-card/doc-card.component";
+import { CalendarUserComponent } from './calendar-user/calendar-user.component';
+import { EventsUserComponent } from './events-user/events-user.component';
+import { FavoritUserComponent } from './favorit-user/favorit-user.component';
+import { HistoryUserComponent } from './history-user/history-user.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { DocCardComponent } from "./doc-card/doc-card.component";
     SignupComponent,
     HomeComponent,
     DoctorSearchComponent,
-    DocCardComponent
+    DocCardComponent,
+    CalendarUserComponent,
+    EventsUserComponent,
+    FavoritUserComponent,
+    HistoryUserComponent
   ],
   imports: [
     BrowserModule,
