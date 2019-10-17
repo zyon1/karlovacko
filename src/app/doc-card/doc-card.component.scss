@@ -1,3 +1,8 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .data-box {
   display: flex;
   flex-wrap: wrap;
@@ -24,4 +29,13 @@
 .company {
   width: 45%;
   margin-top: 20px;
+}
+.material-icons {
+  color: gold;
+}
+.agm-map-container-inner[_ngcontent-hvn-c13] {
+  width: auto !important;
+}
+.agm-map-container-inner {
+  width: auto !important;
 }
