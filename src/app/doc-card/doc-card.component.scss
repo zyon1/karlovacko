@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+.data-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.padding-fix {
+  padding-top: 0;
+}
+
+.company-data {
+  width: 70%;
+}
+.company {
+  width: 45%;
+  margin-top: 20px;
+}
+.material-icons {
+  color: gold;
+}
+.agm-map-container-inner[_ngcontent-hvn-c13] {
+  width: auto !important;
+}
+.agm-map-container-inner {
+  width: auto !important;
+}

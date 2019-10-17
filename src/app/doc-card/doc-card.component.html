@@ -1,0 +1,59 @@
+<div class="data-box">
+  <div class="img">
+    <img
+      src="https://tabibfinder.com/wp-content/uploads/2018/09/male-doctor.png"
+      alt="Smiley face"
+      height="150"
+      width="150"
+    />
+  </div>
+  <div class="company-data">
+    <mat-list class="padding-fix">
+      <mat-list-item>{{ doctor?.firstName }}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{ doctor?.lastName }}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{ doctor?.specialization }}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{ doctor?.description }}</mat-list-item>
+    </mat-list>
+  </div>
+  <div class="stars">
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star_half
+    </i>
+    <i class="material-icons">
+      star_border
+    </i>
+  </div>
+  <div class="company">
+    <mat-card>
+      <ul>
+        <li>{{ doctor?.companyName }}</li>
+        <li>{{ doctor?.companyAddress }}</li>
+      </ul>
+    </mat-card>
+  </div>
+
+  <agm-map
+    *ngIf="doctor?.location"
+    [latitude]="doctor.location.lat"
+    [longitude]="doctor.location.lng"
+    [zoom]="zoom"
+    style="width:50%; height: 300px; margin-top: 20px;"
+  >
+    <agm-marker
+      [latitude]="doctor.location.lat"
+      [longitude]="doctor.location.lng"
+    ></agm-marker>
+  </agm-map>
+</div>

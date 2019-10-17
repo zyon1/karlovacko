@@ -131,7 +131,8 @@ import { ScrollingModule } from "@angular/cdk/scrolling";
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    TooltipModule
   ]
 })
 export class MaterialModule {}
