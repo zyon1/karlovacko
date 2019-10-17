@@ -1,0 +1,44 @@
+<div class="data-box">
+  <div class="img">
+    <img src="smiley.gif" alt="Smiley face" height="42" width="42" />
+  </div>
+  <div class="company-data">
+    <mat-list class="padding-fix">
+      <mat-list-item>Item 1</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Item 2</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Item 3</mat-list-item>
+    </mat-list>
+  </div>
+  <div class="stars">
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star
+    </i>
+    <i class="material-icons">
+      star_half
+    </i>
+    <i class="material-icons">
+      star_border
+    </i>
+  </div>
+  <div class="company">
+    <mat-card>Simple card</mat-card>
+  </div>
+
+  <agm-map
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="zoom"
+    (mapClick)="selectLocation($event)"
+    style="width:50%; height: 300px; margin-top: 20px;"
+  >
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>

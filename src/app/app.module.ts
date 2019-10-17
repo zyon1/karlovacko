@@ -24,6 +24,7 @@ import { DoctorSignupComponent } from "./doctor-signup/doctor-signup.component";
 import { SignupComponent } from "./signup/signup.component";
 import { AgmCoreModule } from "@agm/core";
 import { HomeComponent } from './home/home.component';
+import { DocCardComponent } from './doc-card/doc-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomeComponent } from './home/home.component';
     DashMainComponent,
     DoctorSignupComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    DocCardComponent
   ],
   imports: [
     BrowserModule,
