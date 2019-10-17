@@ -25,6 +25,7 @@ import { SignupComponent } from "./signup/signup.component";
 import { AgmCoreModule } from "@agm/core";
 import { HomeComponent } from './home/home.component';
 import { DoctorSearchComponent } from './doctor-search/doctor-search.component';
+import { DocCardComponent } from './doc-card/doc-card.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,11 @@ import { DoctorSearchComponent } from './doctor-search/doctor-search.component';
     DoctorSignupComponent,
     SignupComponent,
     HomeComponent,
+<<<<<<< HEAD
     DoctorSearchComponent
+=======
+    DocCardComponent
+>>>>>>> 839e7e47deaf54b76cca44cba78b5e3c4a1909b0
   ],
   imports: [
     BrowserModule,

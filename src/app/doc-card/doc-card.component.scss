@@ -1,0 +1,27 @@
+.data-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  border: solid 1px red;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.img {
+  width: 150px;
+  border: solid 1px red;
+  height: 150px;
+}
+
+.padding-fix {
+  padding-top: 0;
+}
+
+.company-data {
+  border: solid 1px red;
+  width: 70%;
+}
+.company {
+  width: 45%;
+  margin-top: 20px;
+}
