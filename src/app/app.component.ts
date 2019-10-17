@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { MatCarousel, MatCarouselComponent } from "@ngmodule/material-carousel";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'karlovacko';
+  items: Array<any> = [];
+
+  constructor() {
+    this.items = [
+      {
+        name: "../assets/images/dental.jpg"
+      },
+      {
+        name: "../assets/images/downloa.jpeg"
+      },
+      {
+        name: "../assets/images/download.jpeg"
+      },
+      {
+        name: "../assets/images/dental.jpg"
+      }
+    ];
+  }
 }
