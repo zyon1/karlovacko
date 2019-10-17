@@ -1,0 +1,6 @@
+<mat-nav-list *ngFor="let link of links">
+  <a mat-list-item [routerLink]="link.link">
+    {{ link.name }}
+  </a>
+  <mat-divider></mat-divider>
+</mat-nav-list>
