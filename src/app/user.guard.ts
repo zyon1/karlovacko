@@ -6,7 +6,7 @@ import {
   UrlTree,
   Router
 } from "@angular/router";
-import { Observable, merge } from "rxjs";
+import { Observable, merge, combineLatest } from "rxjs";
 import { UserService } from "./user.service";
 import { map } from "rxjs/operators";
 
@@ -23,13 +23,13 @@ export class UserGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return merge(
+    return combineLatest(
       this.userService.getUser$(),
       this.userService.getDoctor$()
     ).pipe(
       map(user => {
         console.log(user);
-        if (user) {
+        if (user[0] || user[1]) {
           return true;
         } else {
           console.log("user");

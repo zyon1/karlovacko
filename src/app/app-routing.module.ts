@@ -6,8 +6,10 @@ import { AuthGuard } from "./auth.guard";
 import { UserGuard } from "./user.guard";
 import { DashMainComponent } from "./dash-main/dash-main.component";
 import { SignupComponent } from "./signup/signup.component";
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
+  { path: "", component: HomeComponent },
   {
     path: "signup",
     component: SignupComponent,

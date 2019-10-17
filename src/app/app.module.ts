@@ -23,6 +23,7 @@ import { DashMainComponent } from "./dash-main/dash-main.component";
 import { DoctorSignupComponent } from "./doctor-signup/doctor-signup.component";
 import { SignupComponent } from "./signup/signup.component";
 import { AgmCoreModule } from "@agm/core";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AgmCoreModule } from "@agm/core";
     SiderComponent,
     DashMainComponent,
     DoctorSignupComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
