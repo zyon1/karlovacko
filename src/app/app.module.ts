@@ -23,8 +23,9 @@ import { DashMainComponent } from "./dash-main/dash-main.component";
 import { DoctorSignupComponent } from "./doctor-signup/doctor-signup.component";
 import { SignupComponent } from "./signup/signup.component";
 import { AgmCoreModule } from "@agm/core";
-import { HomeComponent } from './home/home.component';
-import { DocCardComponent } from './doc-card/doc-card.component';
+import { HomeComponent } from "./home/home.component";
+import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
+import { DocCardComponent } from "./doc-card/doc-card.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DocCardComponent } from './doc-card/doc-card.component';
     DoctorSignupComponent,
     SignupComponent,
     HomeComponent,
+    DoctorSearchComponent,
     DocCardComponent
   ],
   imports: [

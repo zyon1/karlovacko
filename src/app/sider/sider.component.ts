@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SiderComponent implements OnInit {
   links = [
-    { name: "Upravljačka ploča", link: "dashboard", active: true },
+    { name: "Upravljačka ploča", link: "/dashboard", active: true },
     { name: "Pretraga", link: "search", active: false },
     { name: "Calendar", link: "calendar", active: false },
     { name: "Moji događaji", link: "my-events", active: false },

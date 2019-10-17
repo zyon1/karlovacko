@@ -1,0 +1,5 @@
+<p>doctor-search works!</p>
+<div *ngFor="let doctor of doctors$ | async">
+  <pre>{{ doctor | json }}</pre>
+  <button mat-button-raised (click)="requestAppointment()">Zahtjev</button>
+</div>

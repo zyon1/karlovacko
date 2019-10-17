@@ -7,6 +7,7 @@ import { UserGuard } from "./user.guard";
 import { DashMainComponent } from "./dash-main/dash-main.component";
 import { SignupComponent } from "./signup/signup.component";
 import { HomeComponent } from "./home/home.component";
+import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -20,7 +21,10 @@ const routes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
     canActivate: [AuthGuard, UserGuard],
-    children: [{ path: "", component: DashMainComponent }]
+    children: [
+      { path: "", component: DashMainComponent },
+      { path: "search", component: DoctorSearchComponent }
+    ]
   }
   /*{
     path: '',

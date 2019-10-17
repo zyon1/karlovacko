@@ -28,7 +28,6 @@ export class UserGuard implements CanActivate {
       this.userService.getDoctor$()
     ).pipe(
       map(user => {
-        console.log(user);
         if (user[0] || user[1]) {
           return true;
         } else {
