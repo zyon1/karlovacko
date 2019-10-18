@@ -11,6 +11,12 @@ import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
 import { CalendarUserComponent } from "./calendar-user/calendar-user.component";
 import { FavoritUserComponent } from "./favorit-user/favorit-user.component";
 import { HistoryUserComponent } from "./history-user/history-user.component";
+import { DoctorDashMainComponent } from './doctor-dash-main/doctor-dash-main.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { RequestsComponent } from './requests/requests.component';
+import { ReportComponent } from './report/report.component';
+import { DashDoctorComponent } from './dash-doctor/dash-doctor.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -30,6 +36,19 @@ const routes: Routes = [
       { path: "calendar", component: CalendarUserComponent },
       { path: "favorit", component: FavoritUserComponent },
       { path: "history", component: HistoryUserComponent }
+    ]
+  },
+  {
+    path: "doctor-dash",
+    component: DashDoctorComponent,
+    canActivate: [AuthGuard, UserGuard],
+    children: [
+      { path: "", component: DoctorDashMainComponent },
+      { path: "catalog", component: CatalogComponent },
+      { path: "calendar", component: CalendarUserComponent },
+      { path: "reservations", component: ReservationsComponent },
+      { path: "requests", component: RequestsComponent },
+      { path: "report", component: ReportComponent }
     ]
   }
   /*{
