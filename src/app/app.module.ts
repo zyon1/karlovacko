@@ -9,7 +9,7 @@ import { MaterialModule } from "./material/material.module";
 import { SignInComponent } from "./sign-in/sign-in.component";
 import { MatCarouselModule } from "@ngmodule/material-carousel";
 import { AuthService } from "./auth.service";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { AngularFireModule } from "@angular/fire";
 import { environment } from "src/environments/environment";
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -89,7 +89,8 @@ import { DoctorDashMainComponent } from "./doctor-dash-main/doctor-dash-main.com
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
-    })
+    }),
+    FormsModule
   ],
 
   providers: [AuthService, AuthGuard, UserGuard],

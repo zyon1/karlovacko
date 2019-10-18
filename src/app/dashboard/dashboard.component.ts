@@ -10,6 +10,7 @@ import { flatMap } from "rxjs/operators";
 })
 export class DashboardComponent implements OnInit {
   user$;
+  value = "Enter text";
   constructor(
     private authService: AuthService,
     private router: Router,

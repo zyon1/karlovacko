@@ -20,12 +20,18 @@
         </mat-form-field>
       </td>
       <td>{{ selectedItem ? selectedItem.value.price + "kn" : "" }}</td>
-      <td *ngIf="selectedItem?.value.price">
+      <td>
         <mat-form-field>
-          <input matInput (keyup)="onKey($event)" min="1" max="99" />
+          <input
+            matInput
+            (keyup)="onKey($event)"
+            min="1"
+            max="99"
+            [attr.disabled]="disablePrice"
+          />
         </mat-form-field>
       </td>
-      <td *ngIf="inputValue > 0">{{ total }}kn</td>
+      <td [attr.disabled]="disableTotal">{{ total }}kn</td>
     </tr>
   </table>
 
