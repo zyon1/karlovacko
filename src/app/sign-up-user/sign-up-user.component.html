@@ -1,14 +1,24 @@
 <mat-card>
   <form [formGroup]="userSignupForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Ime" formControlName="firstName" />
+      <input matInput placeholder="Name" formControlName="firstName" />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Prezime" formControlName="lastName" />
+      <input matInput placeholder="Lastname" formControlName="lastName" />
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Spremi</button>
-    <button mat-raised-button color="warn" type="button" (click)="resetForm()">
-      Obriši
-    </button>
+    <div
+      style="display: flex;
+  justify-content: space-between; "
+    >
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        (click)="resetForm()"
+      >
+        Delete
+      </button>
+    </div>
   </form>
 </mat-card>

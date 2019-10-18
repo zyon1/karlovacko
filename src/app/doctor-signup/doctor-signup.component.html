@@ -1,39 +1,43 @@
 <mat-card>
   <form [formGroup]="doctorSignupForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Ime" formControlName="firstName" />
+      <input matInput placeholder="Name" formControlName="firstName" />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Prezime" formControlName="lastName" />
+      <input matInput placeholder="Lastname" formControlName="lastName" />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Godine" formControlName="age" />
+      <input matInput placeholder="Age" formControlName="age" />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
       <input
         matInput
-        placeholder="Specijalizacija"
+        placeholder="Specialization"
         formControlName="specialization"
       />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
-      <input matInput placeholder="Ime bolnice" formControlName="companyName" />
+      <input
+        matInput
+        placeholder="Company name"
+        formControlName="companyName"
+      />
     </mat-form-field>
     <mat-form-field class="signup-full-width">
       <input
         matInput
-        placeholder="Adresa bolnice"
+        placeholder="Company address"
         formControlName="companyAddress"
       />
     </mat-form-field>
 
     <mat-card formGroupName="working_hours" class="small-card">
-      <h4>Radno vrijeme</h4>
+      <h4>Working hours</h4>
       <mat-form-field>
-        <input matInput placeholder="Od" formControlName="from" type="time" />
+        <input matInput placeholder="From" formControlName="from" type="time" />
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Do" formControlName="to" type="time" />
+        <input matInput placeholder="To" formControlName="to" type="time" />
       </mat-form-field>
     </mat-card>
     <agm-map
@@ -45,9 +49,19 @@
     >
       <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
     </agm-map>
-    <button mat-raised-button color="primary" type="submit">Spremi</button>
-    <button mat-raised-button color="warn" type="button" (click)="resetForm()">
-      Obriši
-    </button>
+    <div
+      style="display: flex;
+    justify-content: space-between; margin: 20px;"
+    >
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        (click)="resetForm()"
+      >
+        Delete
+      </button>
+    </div>
   </form>
 </mat-card>

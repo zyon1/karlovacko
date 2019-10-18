@@ -1,21 +1,20 @@
 mat-toolbar {
-    width: 100%;
-  }
-  mat-sidenav {
-    width: 280px;
-  }
-  mat-sidenav-content {
-    width: calc(100% - 280px);
-  }
-  .body-container {
-    height: calc(100vh - 64px);
-  }
-  
-  .hello {
-    margin-left: 30px;
-  }
-  
-  mat-toolbar-row {
-    justify-content: space-between;
-  }
-  
+  width: 100%;
+}
+mat-sidenav {
+  width: 280px;
+}
+mat-sidenav-content {
+  width: calc(100% - 280px);
+}
+.body-container {
+  height: calc(100vh - 64px);
+}
+
+.hello {
+  margin-left: 30px;
+}
+
+.mat-toolbar-row {
+  justify-content: space-between;
+}
