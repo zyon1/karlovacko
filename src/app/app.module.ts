@@ -43,6 +43,7 @@ import { CatalogComponent } from "./catalog/catalog.component";
 import { RequestsComponent } from "./requests/requests.component";
 import { ReportComponent } from "./report/report.component";
 import { DoctorDashMainComponent } from "./doctor-dash-main/doctor-dash-main.component";
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { DoctorDashMainComponent } from "./doctor-dash-main/doctor-dash-main.com
     RequestsComponent,
     ReportComponent,
     DoctorDashMainComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
