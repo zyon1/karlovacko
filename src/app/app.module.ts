@@ -32,6 +32,13 @@ import { EventsUserComponent } from './events-user/events-user.component';
 import { FavoritUserComponent } from './favorit-user/favorit-user.component';
 import { HistoryUserComponent } from './history-user/history-user.component';
 import { CalendarUserComponent } from './calendar-user/calendar-user.component';
+import { DashDoctorComponent } from './dash-doctor/dash-doctor.component';
+import { SiderDoctorComponent } from './sider-doctor/sider-doctor.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { RequestsComponent } from './requests/requests.component';
+import { ReportComponent } from './report/report.component';
+import { DoctorDashMainComponent } from './doctor-dash-main/doctor-dash-main.component';
 
 
 @NgModule({
@@ -50,7 +57,14 @@ import { CalendarUserComponent } from './calendar-user/calendar-user.component';
     CalendarUserComponent,
     EventsUserComponent,
     FavoritUserComponent,
-    HistoryUserComponent
+    HistoryUserComponent,
+    DashDoctorComponent,
+    SiderDoctorComponent,
+    ReservationsComponent,
+    CatalogComponent,
+    RequestsComponent,
+    ReportComponent,
+    DoctorDashMainComponent
   ],
   imports: [
     BrowserModule,
