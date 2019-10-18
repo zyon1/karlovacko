@@ -18,3 +18,31 @@ mat-sidenav-content {
 .mat-toolbar-row {
   justify-content: space-between;
 }
+
+.header-space {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.p-1 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.bg-light,
+.p-1 .material-icons,
+::-webkit-input-placeholder {
+  color: #673ab7;
+}
