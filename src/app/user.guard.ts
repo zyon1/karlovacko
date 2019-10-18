@@ -35,7 +35,7 @@ export class UserGuard implements CanActivate {
       this.userService.getDoctor$()
     ).pipe(
       map(user => {
-        if (user[1] || state.url.indexOf("/dashboard") === -1) {
+        if (user[1] && state.url.indexOf("/dashboard") !== -1) {
           this.router.navigate(["/doctor-dash"]);
         }
         if (user[0] || user[1]) {

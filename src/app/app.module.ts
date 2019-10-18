@@ -39,6 +39,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { RequestsComponent } from './requests/requests.component';
 import { ReportComponent } from './report/report.component';
 import { DoctorDashMainComponent } from './doctor-dash-main/doctor-dash-main.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { DoctorDashMainComponent } from './doctor-dash-main/doctor-dash-main.com
     CatalogComponent,
     RequestsComponent,
     ReportComponent,
-    DoctorDashMainComponent
+    DoctorDashMainComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
