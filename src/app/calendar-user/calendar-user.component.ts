@@ -79,12 +79,11 @@ export class CalendarUserComponent {
 
   events: CalendarEvent[] = [
     {
-      start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
+      start: addHours(startOfDay(new Date()), 1),
+      end: new Date(),
       title: 'Appointment reserved',
       color: colors.green,
       actions: this.actions,
-      allDay: true,
       resizable: {
         beforeStart: true,
         afterEnd: true
@@ -110,10 +109,7 @@ export class CalendarUserComponent {
       title: 'Declined',
       color: colors.red,
       actions: this.actions,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
+      
       draggable: true
     }
   ];
