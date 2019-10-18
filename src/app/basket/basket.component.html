@@ -27,11 +27,11 @@
             (keyup)="onKey($event)"
             min="1"
             max="99"
-            [attr.disabled]="disablePrice"
+            [disabled]="!disablePrice"
           />
         </mat-form-field>
       </td>
-      <td [attr.disabled]="disableTotal">{{ total }}kn</td>
+      <td>{{ total ? total : "0.00" }}kn</td>
     </tr>
   </table>
 
