@@ -1,3 +1,27 @@
 <div class="data-box">
-  <p>history-user works!</p>
+  <div class="company-data">
+    <mat-list class="padding-fix">
+      <mat-list-item>
+        Doctor Information: <br />Ivan Ivic
+        {{ doctor?.firstName }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Patient information: <br />
+        Pregled oka{{ doctor?.lastName }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Service (price and quantity):<br />Cijena 1 termina 500kn{{
+          doctor?.specialization
+        }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Appointment: <br />12/12/2019 10:00{{
+          doctor?.description
+        }}</mat-list-item
+      >
+    </mat-list>
+  </div>
 </div>
