@@ -21,7 +21,7 @@ export interface ITicket {
   communicationId?: string;
   dateCreated: number;
   dateIssued?: number;
-  basket?: BasketItem[];
+  basket?: any;
 }
 export interface BasketItem {
   name: string;

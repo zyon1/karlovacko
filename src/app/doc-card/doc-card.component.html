@@ -83,7 +83,7 @@ margin-bottom: 10px;
 margin-left: 35px;"
     *ngIf="active === 'schedule'"
   >
-    <button mat-raised-button color="primary" (click)="active = 'basket'">
+    <button mat-raised-button color="primary" (click)="reserve(doctor?.id)">
       Reserve
     </button>
   </div>

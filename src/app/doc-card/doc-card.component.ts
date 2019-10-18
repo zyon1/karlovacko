@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, Input } from "@angular/core";
 import { Doctor } from "../doctor";
+import { TicketsService } from "../tickets.service";
 
 @Component({
   selector: "app-doc-card",
@@ -14,7 +15,7 @@ export class DocCardComponent implements OnInit {
   lng: number = 15.227476;
   zoom = 15;
   active = "doc";
-  constructor() {}
+  constructor(private ticketService: TicketsService) {}
 
   ngOnInit() {}
   selectLocation($event) {
@@ -22,5 +23,10 @@ export class DocCardComponent implements OnInit {
     this.lng = $event.coords.lng;
     this.locationSelected = true;
     console.log("locationSelected");
+  }
+  reserve(id) {
+    if (this.ticketService.dateIssued && this.ticketService.basket) {
+      this.ticketService.createTicket(id);
+    }
   }
 }

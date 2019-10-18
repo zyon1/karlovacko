@@ -19,7 +19,11 @@ import { ReportComponent } from "./report/report.component";
 import { DashDoctorComponent } from "./dash-doctor/dash-doctor.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  {
+    path: "",
+    redirectTo: "/auth",
+    pathMatch: "full"
+  },
   {
     path: "signup",
     component: SignupComponent,
