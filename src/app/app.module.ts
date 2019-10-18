@@ -32,6 +32,7 @@ import { EventsUserComponent } from './events-user/events-user.component';
 import { FavoritUserComponent } from './favorit-user/favorit-user.component';
 import { HistoryUserComponent } from './history-user/history-user.component';
 import { CalendarUserComponent } from './calendar-user/calendar-user.component';
+import { BasketComponent } from './basket/basket.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { CalendarUserComponent } from './calendar-user/calendar-user.component';
     CalendarUserComponent,
     EventsUserComponent,
     FavoritUserComponent,
-    HistoryUserComponent
+    HistoryUserComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
