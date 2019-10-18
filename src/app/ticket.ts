@@ -21,7 +21,15 @@ export interface ITicket {
   communicationId?: string;
   dateCreated: number;
   dateIssued?: number;
+  basket?: BasketItem[];
 }
+export interface BasketItem {
+  name: string;
+  price: number;
+  duration: number;
+  quantity: string;
+}
+/*
 export class Ticket implements ITicket {
   id;
   status: TicektStatus;
@@ -66,3 +74,4 @@ export class Ticket implements ITicket {
   //doc methods
   acceptTicket() {}
 }
+*/

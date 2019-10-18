@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { DoctorsService } from "../doctors.service";
 import { Observable } from "rxjs";
 import { Doctor } from "../doctor";
+import { TicektStatus } from "../ticket";
+import { TicketsService } from "../tickets.service";
 
 @Component({
   selector: "app-doctor-search",
@@ -10,7 +12,10 @@ import { Doctor } from "../doctor";
 })
 export class DoctorSearchComponent implements OnInit {
   doctors$: Observable<Doctor[]>;
-  constructor(private doctorsService: DoctorsService) {
+  constructor(
+    private doctorsService: DoctorsService,
+    private ticketService: TicketsService
+  ) {
     this.doctors$ = this.doctorsService.getDoctors$();
     //
     this.doctors$.subscribe(console.log);
@@ -18,6 +23,6 @@ export class DoctorSearchComponent implements OnInit {
 
   ngOnInit() {}
   requestAppointment(id) {
-    console.log(id);
+    this.ticketService.createTicket(id).then(console.log);
   }
 }
