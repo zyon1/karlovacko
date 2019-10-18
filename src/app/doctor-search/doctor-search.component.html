@@ -1,2 +1,9 @@
-<app-doc-card *ngFor="let doctor of doctors$ | async" [doctor]="doctor">
-</app-doc-card>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened style="width:220px;padding:10px">
+    <app-filters></app-filters>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-doc-card *ngFor="let doctor of doctors$ | async" [doctor]="doctor">
+    </app-doc-card>
+  </mat-drawer-content>
+</mat-drawer-container>

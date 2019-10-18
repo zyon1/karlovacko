@@ -62,25 +62,29 @@
     </button>
   </div>
 </div>
-<app-basket *ngIf="active === 'basket'"></app-basket>
-<div
-  style="width: 100%;     margin-top: -50px;
+<div>
+  <app-basket *ngIf="active === 'basket'"></app-basket>
+  <div
+    style="width: 100%;     margin-top: -50px;
 margin-bottom: 10px;
-margin-left: 35px;"
-  *ngIf="active === 'basket'"
->
-  <button mat-raised-button color="primary" (click)="active = 'schedule'">
-    Next
-  </button>
+margin-left: 35px;display:block"
+    *ngIf="active === 'basket'"
+  >
+    <button mat-raised-button color="primary" (click)="active = 'schedule'">
+      Next
+    </button>
+  </div>
 </div>
-<app-schedule *ngIf="active === 'schedule'"></app-schedule>
-<div
-  style="width: 100%;     margin-top: -50px;
+<div>
+  <app-schedule *ngIf="active === 'schedule'"></app-schedule>
+  <div
+    style="width: 100%;     margin-top: -50px;
 margin-bottom: 10px;
 margin-left: 35px;"
-  *ngIf="active === 'schedule'"
->
-  <button mat-raised-button color="primary" (click)="active = 'basket'">
-    Next
-  </button>
+    *ngIf="active === 'schedule'"
+  >
+    <button mat-raised-button color="primary" (click)="active = 'basket'">
+      Next
+    </button>
+  </div>
 </div>
