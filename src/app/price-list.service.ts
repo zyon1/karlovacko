@@ -16,10 +16,11 @@ export class PriceListService {
     this.pricesCollection = this.db.collection<Price[]>("Prices");
     this.prices$ = this.pricesCollection.snapshotChanges().pipe(
       map(actions => {
+        console.log(actions);
         return actions.map(a => {
           const data = a.payload.doc.data() as Price;
           const id = a.payload.doc.id;
-          return { id, ...data };
+          return { id, ...a.payload.doc.data() };
         });
       })
     );

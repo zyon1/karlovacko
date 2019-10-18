@@ -1,13 +1,15 @@
-<mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Pick termin</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let time of times" [value]="time">
-      {{ time }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+<div class="data-box">
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Pick termin</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let time of times" [value]="time">
+        {{ time }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class SiderComponent implements OnInit {
   links = [
     { name: "Dashboard", link: "/dashboard", active: true },
-    { name: "Search", link: "search", active: false },
-    { name: "Calendar", link: "calendar", active: false },
-    { name: "My event", link: "my-events", active: false },
-    { name: "Favorites", link: "favorites", active: false },
-    { name: "History", link: "history", active: false }
+    { name: "Search", link: "/dashboard/search", active: false },
+    { name: "Calendar", link: "/dashboard/calendar", active: false },
+    { name: "My event", link: "/dashboard/my-events", active: false },
+    { name: "Favorites", link: "/dashboard/favorites", active: false },
+    { name: "History", link: "/dashboard/history", active: false }
   ];
   constructor() {}
 

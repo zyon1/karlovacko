@@ -13,6 +13,7 @@ export class DocCardComponent implements OnInit {
   lat: number = 44.112877;
   lng: number = 15.227476;
   zoom = 15;
+  active = "doc";
   constructor() {}
 
   ngOnInit() {}
