@@ -44,6 +44,7 @@ import { RequestsComponent } from "./requests/requests.component";
 import { ReportComponent } from "./report/report.component";
 import { DoctorDashMainComponent } from "./doctor-dash-main/doctor-dash-main.component";
 import { FiltersComponent } from './filters/filters.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { FiltersComponent } from './filters/filters.component';
     DoctorDashMainComponent,
     ScheduleComponent,
     FiltersComponent
+    UserListComponent
   ],
   imports: [
     BrowserModule,

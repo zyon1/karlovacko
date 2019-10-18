@@ -8,10 +8,27 @@
         >
       </div>
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search dash" value="" />
-      </mat-form-field>
-
+      <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+        <div class="input-group">
+          <input
+            type="search"
+            placeholder="What're you searching for?"
+            aria-describedby="button-addon1"
+            class="form-control border-0 bg-light"
+          />
+          <div class="input-group-append">
+            <button
+              id="button-addon1"
+              type="submit"
+              class="btn btn-link text-primary"
+            >
+              <i class="material-icons">
+                search
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
       <button mat-raised-button type="button" (click)="logout()">Logout</button>
     </div>
   </mat-toolbar-row>
