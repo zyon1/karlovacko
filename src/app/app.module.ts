@@ -26,10 +26,13 @@ import { AgmCoreModule } from "@agm/core";
 import { HomeComponent } from "./home/home.component";
 import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
 import { DocCardComponent } from "./doc-card/doc-card.component";
-import { CalendarUserComponent } from './calendar-user/calendar-user.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { EventsUserComponent } from './events-user/events-user.component';
 import { FavoritUserComponent } from './favorit-user/favorit-user.component';
 import { HistoryUserComponent } from './history-user/history-user.component';
+import { CalendarUserComponent } from './calendar-user/calendar-user.component';
+
 
 @NgModule({
   declarations: [
@@ -63,8 +66,13 @@ import { HistoryUserComponent } from './history-user/history-user.component';
     AngularFirestoreModule,
     AgmCoreModule.forRoot({
       apiKey: environment.mapsApiKey
+    }),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
     })
   ],
+  
   providers: [AuthService, AuthGuard, UserGuard],
   bootstrap: [AppComponent]
 })
