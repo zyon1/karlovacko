@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { Doctor } from "../doctor";
 import { TicektStatus } from "../ticket";
 import { TicketsService } from "../tickets.service";
+import { PriceListService, Price } from "../price-list.service";
 
 @Component({
   selector: "app-doctor-search",
@@ -12,13 +13,18 @@ import { TicketsService } from "../tickets.service";
 })
 export class DoctorSearchComponent implements OnInit {
   doctors$: Observable<Doctor[]>;
+  price$;
   constructor(
     private doctorsService: DoctorsService,
-    private ticketService: TicketsService
+    private ticketService: TicketsService,
+    private priceListService: PriceListService
   ) {
     this.doctors$ = this.doctorsService.getDoctors$();
+    this.price$ = this.priceListService.prices$;
     //
+
     this.doctors$.subscribe(console.log);
+    this.price$.subscribe(console.log);
   }
 
   ngOnInit() {}

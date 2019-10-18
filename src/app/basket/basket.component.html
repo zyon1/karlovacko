@@ -1,0 +1,35 @@
+<div class="data-box">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Select a service</th>
+      <th>Price</th>
+      <th>Amount</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+        <mat-form-field>
+          <mat-label></mat-label>
+          <mat-select (selectionChange)="onSelect($event)">
+            <mat-option *ngFor="let price of prices$ | async" [value]="price">
+              {{ price.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td>{{ selectedItem ? selectedItem.value.price + "kn" : "" }}</td>
+      <td *ngIf="selectedItem?.value.price">
+        <mat-form-field>
+          <input matInput (keyup)="onKey($event)" min="1" max="99" />
+        </mat-form-field>
+      </td>
+      <td *ngIf="inputValue > 0">{{ total }}kn</td>
+    </tr>
+  </table>
+
+  <button mat-mini-fab color="primary">
+    <mat-icon class="add">add</mat-icon>
+  </button>
+</div>
