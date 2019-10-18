@@ -17,6 +17,7 @@ import { ReservationsComponent } from "./reservations/reservations.component";
 import { RequestsComponent } from "./requests/requests.component";
 import { ReportComponent } from "./report/report.component";
 import { DashDoctorComponent } from "./dash-doctor/dash-doctor.component";
+import { EventsUserComponent } from "./events-user/events-user.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -34,7 +35,8 @@ const routes: Routes = [
       { path: "", component: DashMainComponent },
       { path: "search", component: DoctorSearchComponent },
       { path: "calendar", component: CalendarUserComponent },
-      { path: "favorit", component: FavoritUserComponent },
+      { path: "my-events", component: EventsUserComponent },
+      { path: "favorites", component: FavoritUserComponent },
       { path: "history", component: HistoryUserComponent }
     ]
   },
