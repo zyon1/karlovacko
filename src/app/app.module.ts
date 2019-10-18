@@ -26,14 +26,20 @@ import { AgmCoreModule } from "@agm/core";
 import { HomeComponent } from "./home/home.component";
 import { DoctorSearchComponent } from "./doctor-search/doctor-search.component";
 import { DocCardComponent } from "./doc-card/doc-card.component";
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { EventsUserComponent } from './events-user/events-user.component';
-import { FavoritUserComponent } from './favorit-user/favorit-user.component';
-import { HistoryUserComponent } from './history-user/history-user.component';
-import { CalendarUserComponent } from './calendar-user/calendar-user.component';
-import { BasketComponent } from './basket/basket.component';
-
+import { CalendarModule, DateAdapter } from "angular-calendar";
+import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
+import { EventsUserComponent } from "./events-user/events-user.component";
+import { FavoritUserComponent } from "./favorit-user/favorit-user.component";
+import { HistoryUserComponent } from "./history-user/history-user.component";
+import { CalendarUserComponent } from "./calendar-user/calendar-user.component";
+import { BasketComponent } from "./basket/basket.component";
+import { DashDoctorComponent } from "./dash-doctor/dash-doctor.component";
+import { SiderDoctorComponent } from "./sider-doctor/sider-doctor.component";
+import { ReservationsComponent } from "./reservations/reservations.component";
+import { CatalogComponent } from "./catalog/catalog.component";
+import { RequestsComponent } from "./requests/requests.component";
+import { ReportComponent } from "./report/report.component";
+import { DoctorDashMainComponent } from "./doctor-dash-main/doctor-dash-main.component";
 
 @NgModule({
   declarations: [
@@ -52,7 +58,14 @@ import { BasketComponent } from './basket/basket.component';
     EventsUserComponent,
     FavoritUserComponent,
     HistoryUserComponent,
-    BasketComponent
+    BasketComponent,
+    DashDoctorComponent,
+    SiderDoctorComponent,
+    ReservationsComponent,
+    CatalogComponent,
+    RequestsComponent,
+    ReportComponent,
+    DoctorDashMainComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +87,7 @@ import { BasketComponent } from './basket/basket.component';
       useFactory: adapterFactory
     })
   ],
-  
+
   providers: [AuthService, AuthGuard, UserGuard],
   bootstrap: [AppComponent]
 })

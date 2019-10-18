@@ -5,6 +5,8 @@ import { User } from "firebase";
 import { auth } from "firebase/app";
 import { of } from "rxjs";
 
+import { DoctorSearchComponent } from './doctor-search/doctor-search.component';
+
 @Injectable({
   providedIn: "root"
 })
@@ -34,6 +36,8 @@ export class AuthService {
       return this.afAuth.authState;
     }
   }
+
+
   login(email: string, password: string) {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)

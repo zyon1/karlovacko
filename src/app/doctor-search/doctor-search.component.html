@@ -1,7 +1,7 @@
 <div *ngFor="let doctor of doctors$ | async">
   <pre>{{ doctor | json }}</pre>
   <button mat-button-raised (click)="requestAppointment(doctor.id)">
-    Zahtjev
+    Request
   </button>
 </div>
 <app-doc-card *ngFor="let doctor of doctors$ | async" [doctor]="doctor">
