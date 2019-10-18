@@ -1,4 +1,4 @@
-<div class="data-box">
+<div class="data-box" *ngIf="active === 'doc'">
   <div class="img">
     <img
       src="https://tabibfinder.com/wp-content/uploads/2018/09/male-doctor.png"
@@ -56,4 +56,31 @@
       [longitude]="doctor.location.lng"
     ></agm-marker>
   </agm-map>
+  <div style="width: 100%;">
+    <button mat-raised-button color="primary" (click)="active = 'basket'">
+      Next
+    </button>
+  </div>
+</div>
+<app-basket *ngIf="active === 'basket'"></app-basket>
+<div
+  style="width: 100%;     margin-top: -50px;
+margin-bottom: 10px;
+margin-left: 35px;"
+  *ngIf="active === 'basket'"
+>
+  <button mat-raised-button color="primary" (click)="active = 'schedule'">
+    Next
+  </button>
+</div>
+<app-schedule *ngIf="active === 'schedule'"></app-schedule>
+<div
+  style="width: 100%;     margin-top: -50px;
+margin-bottom: 10px;
+margin-left: 35px;"
+  *ngIf="active === 'schedule'"
+>
+  <button mat-raised-button color="primary" (click)="active = 'basket'">
+    Next
+  </button>
 </div>

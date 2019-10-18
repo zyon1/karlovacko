@@ -13,11 +13,11 @@ export class BasketComponent implements OnInit {
   total: number;
   inputValue;
 
-  constructor(private priceListService: PriceListService) {
-    this.prices$ = this.priceListService.prices$;
-  }
+  constructor(private priceListService: PriceListService) {}
 
   ngOnInit() {
+    this.prices$ = this.priceListService.prices$;
+    this.prices$.subscribe(console.log);
     this.total = 0;
   }
   onSelect(item) {

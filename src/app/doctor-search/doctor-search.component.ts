@@ -19,15 +19,15 @@ export class DoctorSearchComponent implements OnInit {
     private ticketService: TicketsService,
     private priceListService: PriceListService
   ) {
-    this.doctors$ = this.doctorsService.getDoctors$();
-    this.price$ = this.priceListService.prices$;
     //
-
-    this.doctors$.subscribe(console.log);
-    this.price$.subscribe(console.log);
+    // this.doctors$.subscribe(console.log);
+    //this.price$.subscribe(console.log);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.doctors$ = this.doctorsService.getDoctors$();
+    this.price$ = this.priceListService.prices$;
+  }
   requestAppointment(id) {
     this.ticketService.createTicket(id).then(console.log);
   }
