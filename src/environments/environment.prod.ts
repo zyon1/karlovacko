@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyD174jqKnjkn16JYKWKS7n2kpf4b-Q6H0g",
+    apiKey: "",
     authDomain: "hackaton-4a2a7.firebaseapp.com",
     databaseURL: "https://hackaton-4a2a7.firebaseio.com",
     projectId: "hackaton-4a2a7",
